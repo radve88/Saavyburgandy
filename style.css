@@ -1,205 +1,109 @@
-/* General Styling */
+/* Base colors */
+:root {
+    --burgundy: #7D0121; /* Burgundy */
+    --vivid-burgundy: #9E1D37; /* Vivid Burgundy */
+    --american-gold: #D6B13A; /* American Gold */
+    --dark-goldenrod: #BB880E; /* Dark Goldenrod */
+    --golden-brown: #A06917; /* Golden Brown */
+    --white: #FFFFFF; /* White */
+    --black: #000000; /* Black */
+}
+
+/* General styles */
 body {
-    font-family: 'Playfair Display', serif;
-    background: #f5ecec;
-    color: #5a3d3d;
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--black);
     margin: 0;
     padding: 0;
 }
 
-/* Header */
 header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 30px;
-    background: #d4a5a5;
+    background-color: var(--burgundy);
+    color: var(--white);
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--american-gold);
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--vivid-burgundy);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
-    top: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-.logo {
-    height: 80px;
-    width: auto;
-        
-        
-        o;
-}
-nav a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 10px;
-    font-size: 18px;
-    font-weight: bold;
+    bottom: 0;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-    background: url('images/hero.jpg') no-repeat center/cover;
-    color: brown;
-    height: 100vh;
-}
-.hero h1 {
-    font-size: 50px;
-    text-transform: uppercase;
-    animation: fadeIn 2s ease-in-out;
-}
-.hero p {
-    font-size: 22px;
-    animation: fadeIn 2.5s ease-in-out;
-}
-.btn {
-    display: inline-block;
-    background: #b67b7b;
-    color: white;
-    padding: 14px 28px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-.btn:hover {
-    background: #914f4f;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Collections */
-.categories {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 0;
-}
-.category {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    width: 200px;
-    transition: transform 0.3s ease-in-out;
-}
-.category:hover {
-    transform: translateY(-10px);
-}
-
-/* Visit Us */
-#visit-us {
-    text-align: center;
-    padding: 60px;
-    background: #e3c1c1;
-    color: #4a2c2c;
-}
-
-/* Questionnaire Section */
-#questionnaire {
-    text-align: center;
-    padding: 60px;
-    background: #f8e7e7;
-    color: #4a2c2c;
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-}
-input, textarea {
-    margin: 10px 0;
-    padding: 12px;
-    border: 1px solid #ccc;
-}
-button {
-    background: #b67b7b;
-    color: white;
+/* Button styles */
+.button {
+    background-color: var(--american-gold);
+    color: var(--black);
     border: none;
-    padding: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
     cursor: pointer;
+    border-radius: 4px;
 }
-button:hover {
-    background: #914f4f;
+
+.button:hover {
+    background-color: var(--dark-goldenrod);
+    color: var(--white);
 }
-/* Product Image & Video Styling */
-.category img, .category video {
+
+/* Ticker styles */
+.ticker {
+    background-color: var(--golden-brown);
+    color: var(--white);
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ticker p {
+    position: absolute;
     width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: ticker 10s linear infinite;
 }
 
-/* Appear smoothly when the page loads */
-.category img.show, .category video.show {
-    opacity: 1;
-    transform: translateY(0);
-    section {
-    
-}
-
-/* Hover Effect - Slight Zoom */
-.category img:hover, .category video:hover {
-    transform: scale(1.05);
-}
-
-    /* scroll-margin-top: 120px;  Adjust based on your header's height */
-
-
-    #about {
-    scroll-margin-top: 80px; /* Default for smartphones */
-}
-
-/* Adjust for tablets (screen width > 768px) */
-@media (min-width: 768px) {
-    #about {
-        scroll-margin-top: 120px; /* Increase for tablets */
-    }
-}
-
-#about {
-    scroll-margin-top: 80px; /* Default for smartphones (Portrait) */
-}
-
-#about {
-    scroll-margin-top: 10vh; /* Default for smartphones (Portrait) */
-}
-
-/* Adjust for tablets (screen width > 768px) */
-@media (min-width: 768px) {
-    #about {
-        scroll-margin-top: 18vh; /* Further increased for tablets */
-    }
-}
-
-/* Additional Fix: Adjust for Landscape Mode */
-@media (orientation: landscape) {
-    #about {
-        scroll-margin-top: 22vh; /* Further increased for landscape mode */
-    }
-}
-
-/* Make ticker text red */
-.#news-ticker {
-    color: red !important; /* Forces red text */
-    font-weight: bold;
-    font-size: 1.5rem;
-    animation: flash 1s step-start infinite;
-}
-
-@keyframes flash {
-    50% { opacity: 0; }
+/* Move it (define the animation) */
+@keyframes ticker {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
