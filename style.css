@@ -107,3 +107,14 @@ footer {
     0%   { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
 }
+/* Fix logo size */
+.logo {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Ensure images scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
