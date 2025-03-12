@@ -1,0 +1,7 @@
+<h2> Announcements </h2>
+<marquee>
+     <b>ANNOUNCEMENT We have fresh stock for cottons for summer Jaipuri kurties and fabulous cotton dresses </b>
+
+</marquee>
+
+
